@@ -3,18 +3,24 @@ html {
   font-family: Helvetica;
 }
 
+.container {
+  width: 960px;
+}
+
 /* header */
 header {
   background-color: black;
+  display: flex;
+  justify-content: center;
+  height: 2.75rem;
 }
 
 .header {
   display: flex;
-  width: 960px;
   align-items: center;
-  justify-content: center;
   color: white;
-  padding: 0.66rem 0;
+  padding-top: 0.66rem;
+  padding-bottom: 0.66rem;
 }
 
 header img {
@@ -33,45 +39,49 @@ header img {
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
+  justify-content: center;
 }
 
 .new {
   width: 20rem;
   background-color: black;
-  height: 10rem;
-  padding: 2rem;
   color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-top: 9rem;
-  margin-left: 5rem;
-  padding-left: 3rem;
+  padding: 2rem 3rem;
 }
 
-.new h2 {
+h2 {
   font-weight: bold;
   font-size: 1rem;
   padding-bottom: 0.25rem;
+  padding-top: 0;
 }
 
-.new h1 {
+h1 {
   font-size: 2rem;
   font-weight: bold;
 }
 
 /* nav bar */
 nav {
+  background-color: firebrick;
   display: flex;
   justify-content: center;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   padding: 0.75rem 0;
   color: white;
-  background-color: firebrick;
 }
 
-nav p {
-  padding: 0 2.75rem;
+.menu {
+  display: none;
 }
 
 /* content */
@@ -79,59 +89,60 @@ nav p {
 .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 /* products */
 .products {
   display: flex;
-  justify-content: center;
-  padding: 3rem 4rem;
+  justify-content: space-between;
+  padding: 3rem 0;
+  width: 960px;
 }
 
 .product {
+  position: relative;
   width: 30%;
   height: 15rem;
   border: 4px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 2rem;
 }
 
 .img {
   height: 13rem;
-  width: 9rem;
   display: flex;
   align-items: center;
   display: flex;
   justify-content: center;
+  max-width: 50%;
 }
 
 .product img {
-  width: 9rem;
-  height: auto;
-  margin: 2rem;
+  width: auto;
+  max-width: 100%;
+  height: 9rem;
+  margin: auto;
+  object-fit: contain;
 }
 
 .name {
   background-color: black;
   color: white;
-  height: 2rem;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.name p {
   padding: 0.5rem 0;
 }
 
 /* location and hrs */
 .info {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-bottom: 4rem;
+  width: 960px;
 }
 
 .location, .hrs {
@@ -158,8 +169,105 @@ footer {
   height: 5rem;
   width: 100%;
   background-color: black;
-  padding-left: 1rem;
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  width: 960px;
+}
+
+/* media */
+
+@media only screen and (max-width: 1024px) {
+  .product {
+    width: 47%;
+  }
+
+  nav .container {
+    justify-content: center;
+  }
+
+  .menu {
+    display: block;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .glasses {
+    display: none;
+  }
+
+  .container, .products, .info {
+    width: 100%;
+  }
+
+}
+
+@media only screen and (max-width: 470px) {
+  .title {
+    display: none;
+  }
+
+  .header {
+    justify-content: center;
+  }
+
+  .mainbanner {
+    align-items: flex-end;
+    padding-top: 10rem;
+    height: 5rem;
+  }
+
+  .mainbanner .container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    padding: 0 0;
+  }
+  .new {
+    margin-top: 0;
+    padding: 1rem 2rem;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 0.77rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  .watch {
+    display: none;
+  }
+
+  .products {
+    justify-content: center;
+  }
+
+  .pen {
+    width: 90%;
+  }
+
+  .info {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .location, .hrs {
+    width: 90%;
+    margin-bottom: 0.5rem;
+  }
+
+  footer p {
+    text-align: center;
+  }
 }
