@@ -74,6 +74,13 @@ nav p {
   padding: 0 2.75rem;
 }
 
+/* content */
+
+.content {
+  display: flex;
+  flex-direction: column;
+}
+
 /* products */
 .products {
   display: flex;
@@ -121,3 +128,38 @@ nav p {
 }
 
 /* location and hrs */
+.info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 4rem;
+}
+
+.location, .hrs {
+  width: 35%;
+}
+
+.info1, .info2 {
+  padding-left: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  background-color: black;
+  height: 2.5rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.info p {
+  padding-top: 0.5rem;
+}
+
+/* footer */
+footer {
+  height: 5rem;
+  width: 100%;
+  background-color: black;
+  padding-left: 1rem;
+  color: white;
+  display: flex;
+  align-items: center;
+}
